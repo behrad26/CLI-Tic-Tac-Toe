@@ -29,7 +29,7 @@ for i in range(0, 9):
             break
     else:
         x = int(input("Player2 (O): "))
-        while not insert(x - 1, "O"): x = int(input("Player1 (O):"))
+        while not insert(x - 1, "O"): x = int(input("Player2 (O):"))
         if check("O"):
             print("O won!")
             break
