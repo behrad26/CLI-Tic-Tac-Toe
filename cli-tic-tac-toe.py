@@ -17,10 +17,12 @@ def check(s):
     if grid[0][0] == grid[1][1] == grid[2][2] == s or grid[0][2] == grid[1][1] == grid[2][0] == s: return True
     return False
 
-print("\n\n\n\n\n")
+print("\n\n\n\n\n\n\n")
 for i in range(0, 9):
-    print("\033[F\x1b[2K\033[F\033[F\033[F\033[F\033[F", end = "")
+    print("\033[F\x1b[2K\033[F\033[F\033[F\033[F\033[F\033[F\033[F", end = "")
+    print()
     print_table()
+    print()
     if i % 2 == 0:
         x = int(input("Player1 (X): "))
         while not insert(x - 1, "X"): x = int(input("Player1 (X):"))
@@ -29,7 +31,7 @@ for i in range(0, 9):
             break
     else:
         x = int(input("Player2 (O): "))
-        while not insert(x - 1, "O"): x = int(input("Player2 (O):"))
+        while not insert(x - 1, "O"): x = int(input("Player1 (O):"))
         if check("O"):
             print("O won!")
             break
